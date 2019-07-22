@@ -39,12 +39,26 @@ public class CoreFeaturesTest {
     @Test
     public void divideTest(){
         double n = 2;
-        calculator.divide(2);
+        display.setCurrentNumber(4);
+        calculator.divide(n);
 
         Double expected = n;
         Double actual = display.getCurrentNumber() / n;
         Assert.assertEquals(expected,actual);
     }
+    /*@Test
+    public void divideErrorTest(){
+        display.setCurrentNumber(8);
+        calculator.divide(0.0);
+
+        String expected = "n/0 not possible, try again";
+        Double actual = display.getCurrentNumber();
+        Assert.assertNotEquals(expected,actual);
+    }
+
+     */
+
+
     @Test
     public void squareTest(){
         display.setCurrentNumber(5);
@@ -117,6 +131,4 @@ public class CoreFeaturesTest {
         double delta = 0;
         Assert.assertEquals(expected,actual,delta);
     }
-    @Test
-    public void errorTest(){}
 }

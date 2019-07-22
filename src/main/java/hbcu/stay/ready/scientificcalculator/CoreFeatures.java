@@ -15,10 +15,26 @@ public class CoreFeatures extends Display {
         display.setCurrentNumber(display.getCurrentNumber()*n);
         return currentNumber;
     }
-    public double divide(double n){
-        display.setCurrentNumber(display.getCurrentNumber()/n);
+
+    public double divide(double n) {
+       try {
+            display.setCurrentNumber(display.getCurrentNumber() / n);
+        } catch (Exception e) {
+            System.out.println("n/0 not possible, try again");
+        }
         return currentNumber;
+
+        /*
+        if (n==0){
+            System.out.println("n/0 not possible, try again");
+        }
+        else{
+            display.setCurrentNumber(display.getCurrentNumber() / n);
+        }
+        return currentNumber;
+        */
     }
+
     public double square(){display.setCurrentNumber(Math.pow(display.getCurrentNumber(),2));
     return currentNumber;
     }
@@ -48,6 +64,5 @@ public class CoreFeatures extends Display {
         }
         return this.currentNumber;
     }
-    //public  error(){}
 
 }
