@@ -29,7 +29,9 @@ public class DisplayTest {
 
     //Scientific Display Features Test
     @Test
-    public void switchDisplayModeTest(){}
+    public void switchDisplayModeTest(){
+
+    }
 
     @Test
     public void switchUnitModeTest(){}
